@@ -110,7 +110,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "DOWN";
             #binding-cells = <0>;
-            bindings = <&kp DOWN_ARROW>, <&down5>, <&kp LC(LS(PAGE_DOWN))>;
+            bindings = <&kp DOWN_ARROW>, <&down5>, <&kp PAGE_DOWN>;
         };
     };
 
@@ -141,10 +141,10 @@
 
         layer_2 {
             bindings = <
-&kp F1   &kp F2  &kp F3  &kp F4        &kp F5                                    &none    &none     &none  &none      &none
-&kp F6   &kp F7  &kp F8  &kp F9        &kp F10         &none        &kp LC(Y)    &none    &none     &up    &none      &none
-&kp F11  &none   &none   &none         &none           &none        &kp LC(Z)    &none    &mv_left  &down  &mv_right  &none
-&kp F12  &none   &trans  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LCTRL    &kp RS(TAB)  &kp TAB                              &none
+&kp F1   &kp F2  &kp F3  &kp F4        &kp F5                                               &none          &none     &none  &none      &none
+&kp F6   &kp F7  &kp F8  &kp F9        &kp F10         &none        &kp LC(Y)               &none          &none     &up    &none      &none
+&kp F11  &none   &none   &none         &none           &none        &kp LC(Z)               &none          &mv_left  &down  &mv_right  &none
+&kp F12  &none   &trans  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LCTRL    &mt LEFT_SHIFT LS(TAB)  &mt RCTRL TAB                              &none
             >;
 
             sensor-bindings = <&scroll_up_down>;
