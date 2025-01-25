@@ -96,14 +96,34 @@
             compatible = "zmk,behavior-tap-dance";
             label = "MV_LEFT";
             #binding-cells = <0>;
-            bindings = <&kp LEFT>, <&kp LC(LEFT)>, <&kp HOME>;
+            bindings = <&kp LEFT>, <&left4>, <&kp HOME>;
         };
 
         mv_right: mv_right {
             compatible = "zmk,behavior-tap-dance";
             label = "MV_RIGHT";
             #binding-cells = <0>;
-            bindings = <&kp RIGHT>, <&kp RC(RIGHT)>, <&kp END>;
+            bindings = <&kp RIGHT>, <&right4>, <&kp END>;
+        };
+
+        up: up {
+            compatible = "zmk,behavior-tap-dance";
+            label = "UP";
+            #binding-cells = <0>;
+            bindings =
+                <&kp UP_ARROW>,
+                <&kp LC(UP_ARROW)>,
+                <&kp LC(LS(UP_ARROW))>;
+        };
+
+        down: down {
+            compatible = "zmk,behavior-tap-dance";
+            label = "DOWN";
+            #binding-cells = <0>;
+            bindings =
+                <&kp DOWN_ARROW>,
+                <&kp LC(DOWN)>,
+                <&kp LC(LS(DOWN_ARROW))>;
         };
     };
 
@@ -134,10 +154,10 @@
 
         layer_2 {
             bindings = <
-&kp F1   &kp F2  &kp F3  &kp F4        &kp F5                                    &none    &none     &none         &none      &none
-&kp F6   &kp F7  &kp F8  &kp F9        &kp F10         &none        &kp LC(Y)    &none    &none     &kp UP_ARROW  &none      &none
-&kp F11  &none   &none   &none         &none           &none        &kp LC(Z)    &none    &mv_left  &kp DOWN      &mv_right  &none
-&kp F12  &none   &trans  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LCTRL    &kp RS(TAB)  &kp TAB                                     &none
+&kp F1   &kp F2  &kp F3  &kp F4        &kp F5                                    &none    &none     &none  &none      &none
+&kp F6   &kp F7  &kp F8  &kp F9        &kp F10         &none        &kp LC(Y)    &none    &none     &up    &none      &none
+&kp F11  &none   &none   &none         &none           &none        &kp LC(Z)    &none    &mv_left  &down  &mv_right  &none
+&kp F12  &none   &trans  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LCTRL    &kp RS(TAB)  &kp TAB                              &none
             >;
 
             sensor-bindings = <&scroll_up_down>;
