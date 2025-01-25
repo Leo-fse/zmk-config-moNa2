@@ -31,39 +31,32 @@
             label = "TO_LAYER_0";
         };
 
-        left4: left4 {
+        left5: left4 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT &kp LEFT &kp LEFT &kp LEFT>;
+            bindings = <&kp LEFT &kp LEFT &kp LEFT &kp LEFT &kp LEFT>;
             label = "LEFT4";
         };
 
-        right4: right4 {
+        right5: right4 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RIGHT &kp RIGHT &kp RIGHT &kp RIGHT>;
+            bindings = <&kp RIGHT &kp RIGHT &kp RIGHT &kp RIGHT &kp RIGHT>;
             label = "RIGHT4";
         };
 
-        del4: del4 {
+        up5: up5 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp DELETE &kp DEL &kp DEL &kp DELETE>;
-            label = "DEL4";
+            bindings = <&kp UP_ARROW &kp UP_ARROW &kp UP_ARROW &kp UP_ARROW &kp UP_ARROW>;
+            label = "UP5";
         };
 
-        bkbkbkbk: bkbkbkbk {
+        down5: down5 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp BACKSPACE &kp BACKSPACE &kp BACKSPACE &kp BACKSPACE>;
-            label = "BKBKBKBK";
-        };
-
-        bk4: bk4 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp BACKSPACE &kp BACKSPACE &kp BACKSPACE &kp BACKSPACE>;
-            label = "BK4";
+            bindings = <&kp DOWN &kp DOWN &kp DOWN &kp DOWN &kp DOWN>;
+            label = "DOWN5";
         };
     };
 
@@ -96,34 +89,28 @@
             compatible = "zmk,behavior-tap-dance";
             label = "MV_LEFT";
             #binding-cells = <0>;
-            bindings = <&kp LEFT>, <&left4>, <&kp HOME>;
+            bindings = <&kp LEFT>, <&left5>, <&kp HOME>;
         };
 
         mv_right: mv_right {
             compatible = "zmk,behavior-tap-dance";
             label = "MV_RIGHT";
             #binding-cells = <0>;
-            bindings = <&kp RIGHT>, <&right4>, <&kp END>;
+            bindings = <&kp RIGHT>, <&right5>, <&kp END>;
         };
 
         up: up {
             compatible = "zmk,behavior-tap-dance";
             label = "UP";
             #binding-cells = <0>;
-            bindings =
-                <&kp UP_ARROW>,
-                <&kp LC(UP_ARROW)>,
-                <&kp LC(LS(UP_ARROW))>;
+            bindings = <&kp UP_ARROW>, <&up5>, <&kp PAGE_UP>;
         };
 
         down: down {
             compatible = "zmk,behavior-tap-dance";
             label = "DOWN";
             #binding-cells = <0>;
-            bindings =
-                <&kp DOWN_ARROW>,
-                <&kp LC(DOWN)>,
-                <&kp LC(LS(DOWN_ARROW))>;
+            bindings = <&kp DOWN_ARROW>, <&down5>, <&kp LC(LS(PAGE_DOWN))>;
         };
     };
 
@@ -132,10 +119,10 @@
 
         default_layer {
             bindings = <
-&kp Q         &kp W         &kp E          &kp R         &kp T                                                          &kp Y                &kp U    &kp I      &kp O      &kp P
-&mt LCTRL A   &lt 3 S       &lt 2 D        &lt 1 F       &kp G        &trans                &kp RS(TAB)                 &kp H                &lt 1 J  &lt 2 K    &lt 3 L    &mt RCTRL ENTER
-&kp Z         &kp X         &kp C          &kp V         &kp B        &kp LA(LC(DELETE))    &kp TAB                     &kp N                &kp M    &mkp LCLK  &mkp RCLK  &lt 5 SLASH
-&kp LEFT_ALT  &kp LEFT_WIN  &kp LG(LS(S))  &kp LEFT_ALT  &lt 2 SPACE  &lt 1 LANGUAGE_1      &mt RIGHT_SHIFT LANGUAGE_2  &mt RCTRL BACKSPACE                                 &mt RIGHT_SHIFT ESCAPE
+&kp Q         &kp W         &kp E          &kp R         &kp T                                                                   &kp Y                &kp U    &kp I      &kp O      &kp P
+&mt LCTRL A   &lt 3 S       &lt 2 D        &lt 1 F       &kp G                 &trans                &kp RS(TAB)                 &kp H                &lt 1 J  &lt 2 K    &lt 3 L    &mt RCTRL ENTER
+&kp Z         &kp X         &kp C          &kp V         &kp B                 &kp LA(LC(DELETE))    &kp TAB                     &kp N                &kp M    &mkp LCLK  &mkp RCLK  &lt 5 SLASH
+&kp LEFT_ALT  &kp LEFT_WIN  &kp LG(LS(S))  &kp LEFT_ALT  &mt LEFT_SHIFT SPACE  &lt 1 LANGUAGE_1      &mt RIGHT_SHIFT LANGUAGE_2  &mt RCTRL BACKSPACE                                 &mt RIGHT_SHIFT ESCAPE
             >;
 
             sensor-bindings = <&scroll_up_down>;
