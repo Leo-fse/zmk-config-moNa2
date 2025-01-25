@@ -130,7 +130,7 @@
 
         layer_1 {
             bindings = <
-&none  &kp COLON          &kp EXCLAMATION          &kp DOLLAR   &kp PLUS                                            &kp RIGHT_BRACE   &kp PIPE                  &kp LS(AT_SIGN)   &kp AMPERSAND  &kp LEFT_BRACE
+&none  &kp EXCLAMATION    &kp COLON                &kp DOLLAR   &kp PLUS                                            &kp RIGHT_BRACE   &kp PIPE                  &kp LS(AT_SIGN)   &kp AMPERSAND  &kp LEFT_BRACE
 &none  &kp LEFT_BRACKET   &kp LS(INTERNATIONAL_1)  &kp MINUS    &kp LS(MINUS)  &none               &kp CARET        &kp LS(ASTERISK)  &kp LS(LEFT_PARENTHESIS)  &kp SINGLE_QUOTE  &kp SEMICOLON  &kp INT_YEN
 &none  &kp DOUBLE_QUOTES  &kp EQUAL                &kp PERCENT  &kp HASH       &none               &kp LS(INT_YEN)  &kp RBKT          &kp BACKSLASH             &kp COMMA         &kp PERIOD     &kp QUESTION
 &none  &none              &none                    &none        &kp LESS_THAN  &kp GREATER_THAN    &kp RIGHT_SHIFT  &kp RCTRL                                                                    &none
