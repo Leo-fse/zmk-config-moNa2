@@ -22,16 +22,6 @@
             layers = <0>;
         };
 
-        lang_1 {
-            bindings = <&kp LANGUAGE_1>;
-            key-positions = <13 12>;
-        };
-
-        lang_2 {
-            bindings = <&kp LANGUAGE_2>;
-            key-positions = <18 19>;
-        };
-
         s_tab {
             bindings = <&kp LS(TAB)>;
             key-positions = <10 11>;
